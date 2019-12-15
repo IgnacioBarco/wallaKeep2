@@ -9,9 +9,16 @@ import App from './components/App/App';
 /* CSS */
 import './index.css';
 
+import { configureStore } from '../src/store'
+
+const store = configureStore();
+
+console.log('creamos el store');
+console.log(store);
+
 // Forzar el modo producción
 const app = <SnackbarProvider maxSnack={2}>
-                <App/>
-            </SnackbarProvider>
+    <App />
+</SnackbarProvider>
 
 ReactDOM.render(app, document.getElementById('root'));

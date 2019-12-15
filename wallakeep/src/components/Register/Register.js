@@ -126,6 +126,8 @@ class Register extends Component {
     const { name, surname, isRemember } = this.state;
     event.preventDefault();
 
+    
+
     // Validación básica del formulario
     if (!name || !surname) {
       enqueueSnackbar('Rellene todos los campos del formulario', {
