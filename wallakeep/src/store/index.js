@@ -1,4 +1,5 @@
 import { createStore } from 'redux';
+import { composeWithDevTools } from 'redux-devtools-extension';
 
 // import * as reducer from './reducers';
 import log from './reducers';
@@ -17,7 +18,9 @@ import log from './reducers';
 //   };
 
 export function configureStore() {
-    const store = createStore(log);
+    const store = createStore(
+        log,
+        composeWithDevTools());
     return store;
 
 }

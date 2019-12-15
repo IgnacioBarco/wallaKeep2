@@ -11,7 +11,7 @@ export default function log(state = initialState, action) {
     switch (action.TYPE) {
         case TYPE.LOGIN:
             console.log('se ha logado');
-            return state;
+            return { ...state, adverts:[1,2]};
         default:
             return state;
     }

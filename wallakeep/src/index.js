@@ -15,6 +15,9 @@ const store = configureStore();
 
 console.log('creamos el store');
 console.log(store);
+console.log(store.getState());
+
+window.store = store;
 
 // Forzar el modo producción
 const app = <SnackbarProvider maxSnack={2}>
